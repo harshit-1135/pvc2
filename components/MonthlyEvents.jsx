@@ -24,17 +24,17 @@ const chartSetting = {
     },
 };
 
-export default function MonthlyEvents(entity) {
+export default function MonthlyEvents({entity}) {
+
     const [dataset, setDataset] = useState([]);
     const [tickPlacement, setTickPlacement] = useState('middle');
     const [tickLabelPlacement, setTickLabelPlacement] = useState('middle');
     useEffect(() => {
         const fetchData = async () => {
             try {//sf
-                const entityId = entity;
-
+ console.log(entity);
                 const response = await axios.get('https://intracu-backend-mdl9.onrender.com/api/event/getMonthWiseEvents', {
-                    params: { entityId:entityId }
+                    params: { entityId:entity }
                 });
                 setDataset(response.data);
             } catch (error) {
