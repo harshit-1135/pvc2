@@ -34,7 +34,7 @@ export default function MonthlyEvents(entity) {
                 const entityId = entity;
 
                 const response = await axios.get('https://intracu-backend-mdl9.onrender.com/api/event/getMonthWiseEvents', {
-                    params: { entityId }
+                    params: { entityId:entityId }
                 });
                 setDataset(response.data);
             } catch (error) {
