@@ -62,7 +62,7 @@ const Page = () => {
         } else if (data.role === 'Faculty') {
           localStorage.setItem('entity',data.user.club);
 
-          router.push('/FacultyAdvisor');
+          router.push('/facultyDashboard');
         } else if (data.role === 'Central Office') {
           router.push('/centralOffice');
         }
