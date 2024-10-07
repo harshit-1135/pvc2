@@ -98,6 +98,8 @@ export default function Component() {
     {
       icon: <FileText size={40} />,
       subtitle: "Forms & Documents",
+      link:"https://pvcco-curricularrepo.netlify.app/",
+      linkText:"view more"
     },
   ];
   

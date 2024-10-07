@@ -23,7 +23,7 @@ const Sidebar = ({ open, setOpen }) => {
         { title: "Prof. Societies", icon: <FileText />, url: "/profSociety" },
         { title: "Communities", icon: <Users />, url: "/communities" },
         { title: "Extra Co-Curricular", icon: <Briefcase />, url: "/extra-curricular" },
-        { title: "Documents", icon: <File />, url: "/documents" },
+        { title: "Documents", icon: <File />, url: "https://pvcco-curricularrepo.netlify.app/" },
         { title: "FAQs", icon: <HelpCircle />, url: "/faqs" },
         { title: "Group", icon: <Users />, url: "/group" },
         { title: "Join Now", icon: <UserPlus />, url: "#", onClick: () => setIsOpen(true) }, // Set the dialog to open on click
