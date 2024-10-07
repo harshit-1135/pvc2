@@ -13,7 +13,7 @@ const FacultySidebar = ({ open, setOpen }) => {
         { title: "Proposed Events", icon: <FileText />, url: "/profSociety" },
         { title: "Post Events", icon: <CalendarCheck />, url: "/club" },
         { title: "Support", icon: <HelpCircle />, url: "" },
-        { title: "Log Out", icon: <LogOut />, url: "" },
+        { title: "Log Out", icon: <LogOut />, url: "/login" },
     ];
 
     return (
