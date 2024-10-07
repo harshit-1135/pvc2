@@ -1,0 +1,43 @@
+{
+  "name": "pvc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@headlessui/react": "^2.1.9",
+    "@mui/material": "^6.1.2",
+    "@mui/x-charts": "^7.19.0",
+    "@mui/x-date-pickers": "^7.19.0",
+    "@nextui-org/navbar": "^2.0.37",
+    "@nextui-org/react": "^2.4.8",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/table": "^2.0.40",
+    "@nextui-org/theme": "^2.2.11",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "flowbite-react": "^0.10.2",
+    "framer-motion": "^11.9.0",
+    "lucide-react": "^0.447.0",
+    "next": "^14.2.14",
+    "primereact": "^10.8.3",
+    "react": "^18",
+    "react-data-table-component": "^7.6.2",
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.14",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
