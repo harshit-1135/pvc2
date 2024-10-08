@@ -8,7 +8,7 @@ import axios from 'axios';
 export default function EventCarousel() {
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: true, 
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false, // You can enable arrows if needed
