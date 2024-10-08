@@ -17,7 +17,7 @@ const Sidebar = ({ open, setOpen }) => {
 
     const Menus = [
         { title: "Home", icon: <Home />, url: "/" },
-        { title: "Events", icon: <Calendar />, url: "/event" },
+        // { title: "Events", icon: <Calendar />, url: "/event" },
         { title: "Clubs", icon: <Briefcase />, url: "/club" },
         { title: "Dept. Societies", icon: <ClipboardList />, url: "/departSociety" },
         { title: "Prof. Societies", icon: <FileText />, url: "/profSociety" },
@@ -26,7 +26,7 @@ const Sidebar = ({ open, setOpen }) => {
         { title: "Documents", icon: <File />, url: "https://pvcco-curricularrepo.netlify.app/" },
         { title: "FAQs", icon: <HelpCircle />, url: "/faqs" },
         { title: "Group", icon: <Users />, url: "/group" },
-        { title: "Join Now", icon: <UserPlus />, url: "#", onClick: () => setIsOpen(true) }, // Set the dialog to open on click
+        { title: "Join Now", icon: <UserPlus />, url: "//", onClick: () => setIsOpen(true) }, // Set the dialog to open on click
     ];
 
     const handleChange = (e) => {
@@ -42,7 +42,7 @@ const Sidebar = ({ open, setOpen }) => {
 
     return (
         <div
-            className={`${open ? "md:w-60" : "w-20"} mt-12 hidden lg:block bg-dark-purple h-screen py-5 pt-8 fixed duration-300 border-r-2 backdrop-blur-sm`}
+            className={`${open ? "md:w-60" : "w-20"} mt-12 hidden lg:block bg-dark-purple h-screen py-5 pt-8 fixed duration-300 border-r-1 backdrop-blur-sm`}
         >
             <div
                 className={`absolute text-black cursor-pointer right-6 top-9 w-7 bg-white flex justify-center items-center`}
@@ -50,11 +50,9 @@ const Sidebar = ({ open, setOpen }) => {
             >
                 <AlignJustify />
             </div>
-            <div className="flex pl-6 text-black items-center pb-4 border-b-1">
-                <h1
-                    className={`origin-left font-medium text-xl duration-200 ${!open && "scale-0"}`}
-                >
-                    Explore
+            <div className="flex pl-6 text-black items-center pb-4 ">
+                <h1 className={`origin-left font-medium text-xl duration-200 ${!open && "scale-0"}`} >
+                    Discover
                 </h1>
             </div>
             <ul className="">
@@ -63,12 +61,12 @@ const Sidebar = ({ open, setOpen }) => {
                         key={index}
                         href={Menu.url}
                         onClick={Menu.onClick} // Handle onClick for Join Now
-                        className={`flex pl-6 py-2 cursor-pointer hover:bg-light-white text-gray-300 text-md border-b-1 items-center gap-x-0 ${path === Menu.url ? "bg-blue-400" : "bg-white"}`}
+                        className={`flex pl-6 pt-3 py-2 cursor-pointer hover:bg-light-white rounded-2xl m-1 text-gray-300 text-md items-center gap-x-0 ${path === Menu.url ? "bg-blue-400 text-white" : "bg-white"}`}
                     >
-                        <div className="h-[30px] w-[30px] mr-1 text-black">
+                        <div className={`h-[30px] w-[30px] mr-1 text-black ${path === Menu.url ? "text-white" : ""}`}>
                             {Menu.icon}
                         </div>
-                        <span className={`${!open && "hidden"} origin-left text-gray-900 font-thin hover:text-blue-700 text-base hover:text-lg duration-200`}>
+                        <span className={`${!open && "hidden"} origin-left ${path === Menu.url ? "text-white" : "text-black"} font-thin hover:text-blue-700 text-base hover:text-lg duration-200`}>
                             {Menu.title}
                         </span>
                     </Link>

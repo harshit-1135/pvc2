@@ -18,7 +18,7 @@ const FacultySidebar = ({ open, setOpen }) => {
 
     return (
         <div
-            className={`${open ? "md:w-60" : "w-20"} mt-12 hidden lg:block bg-dark-purple h-screen py-5 pt-8 fixed duration-300  border-r-2 backdrop-blur-sm`}
+            className={`${open ? "md:w-60" : "w-20"} mt-12 hidden lg:block bg-dark-purple h-screen py-5 pt-8 fixed duration-300  border-r-1 backdrop-blur-sm`}
         >
             <div
                 className={`absolute cursor-pointer right-6 top-9 w-7  bg-white  flex justify-center items-center`}
@@ -26,7 +26,7 @@ const FacultySidebar = ({ open, setOpen }) => {
             >
                 <AlignJustify />
             </div>
-            <div className="flex pl-6 items-center pb-3 pt-1 border-b-1 ">
+            <div className="flex pl-6 items-center pb-3 pt-1  ">
                 <h1
                     className={`origin-left font-medium text-lg duration-200 ${!open && "scale-0"}`}
                 >
@@ -37,7 +37,7 @@ const FacultySidebar = ({ open, setOpen }) => {
                 {Menus.map((Menu, index) => (
                     <Link
                         key={index}
-                        className={`flex pl-6 py-2 cursor-pointer hover:bg-light-white text-gray-300 text-md border-b-1 items-center gap-x-0 ${path === Menu.url ? "bg-customOrange" : "bg-white"}`}
+                        className={`flex pl-6 pt-3 py-2 cursor-pointer hover:bg-light-white rounded-2xl m-1 text-gray-300 text-md items-center gap-x-0 ${path === Menu.url ? "bg-customOrange" : "bg-white"}`}
                         href={Menu.url} // Use Menu.url here
                     >
                         <div className='h-[30px] w-[30px] mr-1 text-black'>

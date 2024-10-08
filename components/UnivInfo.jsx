@@ -6,16 +6,11 @@ import axios from 'axios';
 const InfoCard = ({ icon, title, subtitle, link, linkText }) => (
   <div className="w-full lg:h-48 bg-gradient-to-r from-custom-blue-1 to-custom-blue-2 rounded-[3rem] shadow-lg text-white p-4 flex gap-2 lg:flex-col items-center justify-center text-center transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer">
     <div className="">
-      <div className="text-4xl flex justify-center">{icon}</div>
-      <h3 className="text-4xl font-bold mb-1">{title}</h3>
+      <div className="text-6xl flex justify-center">{icon}</div>
+      <h3 className="text-5xl font-bold mb-1">{title}</h3>
     </div>
     <div>
       {subtitle && <p className="text-lg">{subtitle}</p>}
-      {link && linkText && (
-        <a href={link} className="text-sm underline hover:text-blue-200">
-          {linkText}
-        </a>
-      )}
     </div>
   </div>
 );
@@ -77,15 +72,11 @@ export default function Component() {
       icon: <></>,
       title: `${defaultEntityCounts.clubs.count + defaultEntityCounts.communities.count + defaultEntityCounts.departmentalSocieties.count + defaultEntityCounts.professionalSocieties.count}+`,
       subtitle: "University Bodies",
-      link: "/club", // Example link
-      linkText: "View more"
     },
     {
       icon: <></>,
       title: `${defaultEventCounts.monthly + defaultEventCounts.weekly + defaultEventCounts.flagship}+`,
       subtitle: "Events",
-      link: "https://example.com/enroll-now", // Example link
-      linkText: "Enroll now"
     },
     {
       icon: <CheckCircle size={40} />,
@@ -95,24 +86,16 @@ export default function Component() {
       icon: <PieChart size={40} />,
       subtitle: "Credits and GP",
     },
-    {
-      icon: <FileText size={40} />,
-      subtitle: "Forms & Documents",
-      link:"https://pvcco-curricularrepo.netlify.app/",
-      linkText:"view more"
-    },
   ];
   
   return (
-    <div className="hidden lg:grid lg:grid-cols-5 lg:gap-10 gap-4 mt-6 px-6 lg:px-0">
+    <div className="hidden lg:grid lg:grid-cols-4  gap-4 mt-6 px-6 lg:px-0">
       {infoCards.map((card, index) => (
         <InfoCard
           key={index}
           icon={card.icon}
           title={card.title}
           subtitle={card.subtitle}
-          link={card.link}
-          linkText={card.linkText}
         />
       ))}
     </div>
