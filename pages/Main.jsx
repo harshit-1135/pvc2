@@ -28,10 +28,12 @@ const Main = () => {
     return (
         <div>
             <Sidebar className='' open={open} setOpen={setOpen} />
-            <Nav />
+            
+            
             <div
-                className={`transition-all duration-300 ${open ? "md:ml-[16.5rem]  w-[40%] md:w-[80.2%]" : "mx-2 lg:mx-0 lg:ml-24 mr-8"} md:w-[92.100%] w-[95.5%]`}
+                className={`transition-all duration-300 ${open ? "md:ml-[16.5rem]  w-[40%] md:w-[80.2%]" : "mx-2 lg:mx-0 md:w-[93%] lg:ml-24 mr-8"} md:w-[83.100%] w-[95.5%]`}
             >
+                <Nav />
                 <UnivInfo />
                 <div className="lg:flex justify-between gap-4 space-y-4 lg:space-y-0 w-full h-96 px- mt-4 mb-72 lg:mb-0">
                     <div className="lg:w-full h-64 lg:h-full rounded-[2rem] overflow-hidden">
