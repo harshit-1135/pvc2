@@ -113,7 +113,7 @@ export default function Nav() {
         <NavbarContent justify="centre">
           <NavbarBrand>
             <div className="flex gap-4">
-              <img src="./CU Long.png" className="h-[35px]" alt="CU Long logo" />
+              {/* <img src="./CU Long.png" className="h-[35px]" alt="CU Long logo" /> */}
               <img
                 src="./NAAC.png"
                 className="h-[35px] hidden lg:block"
